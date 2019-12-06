@@ -1,4 +1,3 @@
+--Input: 3 Float xg yg xh; Output: Float
 valueAt :: Float -> Float -> Float -> Float
-valueAt xg yg x yg = (yg / xg) * x
- --|xg > yg = (yg / xg) * x
- --|xg < yg = (yg / xg) * x
+valueAt xg yg xh = ((0-yg)/(xg-0)) * xh -- berechnung von y
