@@ -14,3 +14,4 @@ jTwistedCaesar j c
 	 | Data.Char.isUpper c && Data.Char.ord c + j < 91 = toLower (Data.Char.chr (Data.Char.ord c + j)) --gross und im Bereich
 	 | Data.Char.isUpper c && Data.Char.ord c + j >= 91 = toLower (Data.Char.chr (Data.Char.ord c - 26 + j)) --gross und zurueckspringen
 	 | otherwise = error "Eingabe ist weder ein ASCII klein Buchstabe noch ein gross Buchstabe"
+--toLower & toUpper koennten auch durch subtraktion bzw. addition von 32 ersetztwerden (Abstand der gross zu klein Buchtsaben in ASCII) waehre jedoch schwerer zu lesen.
