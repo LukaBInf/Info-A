@@ -10,4 +10,4 @@ fst'::[Int] -> Int
 fst' [a,_] = a
 
 snd'::[Int] -> Int
-snd [a,b,_]
+snd' [a,b,_] = b

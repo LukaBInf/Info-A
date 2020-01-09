@@ -11,11 +11,11 @@ hitsBank (x,y) (s,t)
 
 bankPos:: Position -> Strike -> Position
 bankPos (x,y) (s,t)
-    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s > 0) && (t > 0))= (x+ (s/t * (10-y)),10) --Nord Richtig
-    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t > 0))= (x+ (s/t * (10-y)),10) --Nord richtig
-    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s > 0) && (t > 0))= (20,(y+ (t/s * (20-x)))) --"Ost"Richtig
-    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s > 0) && (t < 0))= (20,(y+ (t/s * (20-x))))--"Ost"Richtig
-    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s < 0) && (t > 0))= (0,(y+ (t/s * (0-x))))--"west"Richtig
-    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t < 0)) && (0 > (x+ (s/t * (0-y))))= (0,(y+ (t/s * (0-x))))--"west"HÄÄÄÄÄÄÄÄÄ <
-    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t < 0))= (x+ (s/t * (0-y)),0)--"Sued"Richtig
-    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s > 0) && (t < 0))= (x+ (s/t * (0-y)),0)--"Sued"Richtig
+    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s > 0) && (t > 0))= (x+ (s/t * (10-y)),10) --Nord
+    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t > 0))= (x+ (s/t * (10-y)),10) --Nord
+    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s > 0) && (t > 0))= (20,(y+ (t/s * (20-x)))) --Ost
+    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s > 0) && (t < 0))= (20,(y+ (t/s * (20-x))))--Ost
+    | ((abs (t)/abs(s)) < ((10-y) / (20-x))) && ((s < 0) && (t > 0))= (0,(y+ (t/s * (0-x))))--West
+    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t < 0)) && (0 > (x+ (s/t * (0-y))))= (0,(y+ (t/s * (0-x))))--West, da Bedingungen gleich sind wie beim Süd-westen, musste (0 > (x+ (s/t * (0-y)))) eingefügt werden. somit wird dir Berechnung nur durchgefuehrt, wenn die Südberechnung negativ Werte ausgibt
+    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s < 0) && (t < 0))= (x+ (s/t * (0-y)),0)--Sued
+    | ((abs (t)/abs(s)) > ((10-y) / (20-x))) && ((s > 0) && (t < 0))= (x+ (s/t * (0-y)),0)--Sued
