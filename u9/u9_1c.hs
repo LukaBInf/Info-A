@@ -1,3 +1,4 @@
+--sumOfTwo: patternmatching & rekursion
 sumOfTwo::[Float]->[Float]->[Float]
 sumOfTwo [] [] = []
 sumOfTwo xs [] = xs
